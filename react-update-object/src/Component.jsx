@@ -12,10 +12,14 @@ function Component() {
            if you have object properties with same names
            the javascript considers the later one or 
            latest one and other will be discarded */
-           setCar({year:2020,
-                make:"lamborgini",
-                model:"aventador",
-                year: 2025});
+        /* it's always a good practice to have updater
+           function when we are dependent on previous state*/
+           // remeber to use () 
+           // use c to previous state
+        /* now let's implement our onChange event handler 
+           to update it's value in real time */
+           setCar(c => ({...c, year: event.target.value}));
+
     }
     function handleMakeChange(event) {
         
