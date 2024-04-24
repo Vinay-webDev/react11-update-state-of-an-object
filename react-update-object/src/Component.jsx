@@ -19,13 +19,12 @@ function Component() {
         /* now let's implement our onChange event handler 
            to update it's value in real time */
            setCar(c => ({...c, year: event.target.value}));
-
     }
     function handleMakeChange(event) {
-        
+        setCar(c => ({...c, make: event.target.value}));
     }
     function handleModelChange(event) {
-
+        setCar(c => ({...c, model: event.target.value}));
     }
     return(<div>
                <p> your favorite car: 
